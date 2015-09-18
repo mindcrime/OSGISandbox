@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-Name: OSGI6
+Bundle-SymbolicName: org.example.osgi6
+Bundle-Description: A bundle that uses a Service from another bundle to display "Hello World" messages
+Bundle-Vendor: Fogbeam
+Bundle-Version: 1.0.0
+Bundle-Activator: org.example.osgi6.SayHelloServiceClient
+Import-Package: org.osgi.framework, org.example.osgi6a, org.example.osgi6a.impl
