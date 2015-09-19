@@ -11,6 +11,11 @@
 			<artifactId>org.apache.felix.framework</artifactId>
 			<version>4.0.2</version>
 		</dependency>
+		<dependency>
+			<groupId>osgi5a</groupId>
+			<artifactId>osgi5a</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 
