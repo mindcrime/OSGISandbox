@@ -2,7 +2,6 @@ package org.example.osgi5a;
 
 import java.util.Dictionary;
 import java.util.Hashtable;
-import java.util.Properties;
 
 import org.example.osgi5a.impl.HelloServiceImpl;
 import org.osgi.framework.BundleActivator;
@@ -12,7 +11,7 @@ import org.osgi.framework.ServiceRegistration;
 public class SayHelloServiceActivator implements BundleActivator
 {
 	
-	ServiceRegistration<?> registration;
+	ServiceRegistration registration;
 
 	@Override
 	public void start( BundleContext context ) throws Exception 
