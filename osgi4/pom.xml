@@ -4,7 +4,7 @@
 	<groupId>osgi4</groupId>
 	<artifactId>osgi4</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
+	<packaging>bundle</packaging>
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.felix</groupId>
@@ -25,6 +25,20 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Import-Package>org.osgi.framework,org.example.hello, org.example.hello.impl</Import-Package>
+						<Bundle-Activator>org.example.osgi4.SayHelloComp</Bundle-Activator>
+					</instructions>
+				</configuration>
+			</plugin>			
+			
+			
 		</plugins>
 	</build>
 </project>

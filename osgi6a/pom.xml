@@ -4,7 +4,8 @@
 	<groupId>osgi6a</groupId>
 	<artifactId>osgi6a</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
+	<packaging>bundle</packaging>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.felix</groupId>
@@ -26,6 +27,20 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Export-Package>org.example.osgi6a, org.example.osgi6a.impl</Export-Package>
+						<Import-Package>org.osgi.framework</Import-Package>
+						<Bundle-Activator>org.example.osgi6a.SayHelloServiceActivator</Bundle-Activator>
+					</instructions>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 </project>

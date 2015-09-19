@@ -3,6 +3,9 @@
   <groupId>osgi4a</groupId>
   <artifactId>osgi4a</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>bundle</packaging>
+  
+  
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
@@ -14,6 +17,19 @@
           <target>1.6</target>
         </configuration>
       </plugin>
+      
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Export-Package>org.example.hello,org.example.hello.impl</Export-Package>
+					</instructions>
+				</configuration>
+			</plugin>      
+      
+      
     </plugins>
   </build>
 </project>

@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Bundle-Name: OSGI4a
-Bundle-Description: A bundle to display "Hello World" messages
-Bundle-Vendor: Fogbeam
-Bundle-Version: 1.0.0
-Export-Package: org.example.hello, org.example.hello.impl

@@ -4,16 +4,21 @@
 	<groupId>osgi3</groupId>
 	<artifactId>osgi3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
+	<packaging>bundle</packaging>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.felix</groupId>
 			<artifactId>org.apache.felix.framework</artifactId>
 			<version>4.0.2</version>
 		</dependency>
+		<dependency>
+			<groupId>osgi2</groupId>
+			<artifactId>osgi2</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
 	</dependencies>
-
-
 
 	<build>
 		<sourceDirectory>src</sourceDirectory>
@@ -26,6 +31,20 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Import-Package>tutorial.example2.service,org.osgi.framework</Import-Package>
+						<Bundle-Activator>tutorial.example3.Activator</Bundle-Activator>
+					</instructions>
+				</configuration>
+			</plugin>			
+			
+			
 		</plugins>
 	</build>
 </project>

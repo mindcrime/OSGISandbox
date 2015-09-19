@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Bundle-Name: OSGI4
-Bundle-Description: A bundle that uses classes from another bundle to display "Hello World" messages
-Bundle-Vendor: Fogbeam
-Bundle-Version: 1.0.0
-Bundle-Activator: org.example.osgi4.SayHelloComp
-Import-Package: org.osgi.framework, org.example.hello, org.example.hello.impl
