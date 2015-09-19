@@ -2,7 +2,6 @@ package org.example.osgi7a;
 
 import java.util.Dictionary;
 import java.util.Hashtable;
-import java.util.Properties;
 
 import org.example.osgi7a.impl.HelloServiceImpl;
 import org.osgi.framework.BundleActivator;
