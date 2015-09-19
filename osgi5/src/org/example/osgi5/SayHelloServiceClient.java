@@ -14,9 +14,9 @@ public class SayHelloServiceClient implements BundleActivator
 	public void start( BundleContext context ) throws Exception 
 	{
 		// locate our service and use it to say hello...
-		ServiceReference<IHello> reference = context.getServiceReference(IHello.class);
+		ServiceReference reference = context.getServiceReference(IHello.class);
 		
-		IHello hello = context.getService( reference );
+		IHello hello = (IHello)context.getService( reference );
 		
 		StoppableHello stoppableHello = new StoppableHelloImpl( hello );
 		ourThread = new StoppableThread( stoppableHello );
